@@ -1,16 +1,14 @@
 # Hamster-Auto-buy-BestCard & AutoClicker
 
-## Auto buy
-```
-bash <(curl -fsSL https://raw.githubusercontent.com/Ptechgithub/Hamster-Auto-buy-BestCard/main/install.sh)
-```
-### More advanced Auto buy
-```
-bash <(curl -fsSL https://raw.githubusercontent.com/Ptechgithub/Hamster-Auto-buy-BestCard/main/install_second.sh)
-```
 ### Auto Clicker
+
+How to turn it on?
+Install python and requirments.
+https://www.python.org/downloads/
+
+Open terminal in main folder and run command.
 ```
-bash <(curl -fsSL https://raw.githubusercontent.com/Ptechgithub/Hamster-Auto-buy-BestCard/main/clicker.sh)
+python .\Hamster_Auto_buy.py
 ```
 ![29](https://raw.githubusercontent.com/Ptechgithub/configs/main/media/29.jpg)
 ---
@@ -26,5 +24,3 @@ How to Run hamster in Browser:
 - Get Authorization:
 
 ![30](https://raw.githubusercontent.com/Ptechgithub/configs/main/media/30.jpg)
-
-[آموزش ویدیویی در YouTube](https://www.youtube.com/watch?v=bXND1sElZuc)

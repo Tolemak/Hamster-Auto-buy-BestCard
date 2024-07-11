@@ -195,7 +195,7 @@ for best_item in selected_upgrades:
 
         if 'error_code' in purchase_status:
             if cooldown > cooldown_to_skip:
-                print(f"{Colors.RED} Waiting is too loong({cooldown} seconds. Skip this upgrade...)")
+                print(f"{Colors.RED}Waiting is too loong({cooldown} seconds. Skip this upgrade...)")
             else:
                 wait_for_cooldown(cooldown)
         else:
