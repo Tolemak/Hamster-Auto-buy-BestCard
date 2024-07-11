@@ -157,6 +157,11 @@ for upgrade in upgrades_with_ratios:
     print(f"{Colors.GREEN}{i}{Colors.RESET}) Ratio: {upgrade['ratio']:.2f}% - Max Profit: {Colors.YELLOW}{upgrade['max_profit']:,}{Colors.RESET} - Budget: {Colors.YELLOW}{upgrade['budget']:,}")
     i += 1
 upgrades_num = int(input(f"{Colors.GREEN}Choice : {Colors.YELLOW}")) - 1
+cooldown_to_skip = int(
+    input(
+        f"{Colors.GREEN}Enter the number of seconds beyond which the upgrade is to be skipped : {Colors.YELLOW}"
+    )
+)
 
 # Get current balance
 url = "https://api.hamsterkombat.io/clicker/sync"
@@ -189,7 +194,10 @@ for best_item in selected_upgrades:
         purchase_status = purchase_upgrade(authorization, best_item_id)
 
         if 'error_code' in purchase_status:
-            wait_for_cooldown(cooldown)
+            if cooldown > cooldown_to_skip:
+                print(f"{Colors.RED} Waiting is too loong({cooldown} seconds. Skip this upgrade...)")
+            else:
+                wait_for_cooldown(cooldown)
         else:
             print(f"{Colors.GREEN}Upgrade '{Colors.YELLOW}{best_item_id}{Colors.GREEN}' purchased successfully.{Colors.RESET}")
             print(f"{Colors.GREEN}Waiting 8 seconds before next purchase...{Colors.RESET}")
